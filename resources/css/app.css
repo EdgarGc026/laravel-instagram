@@ -1,0 +1,55 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.layout {
+  max-width: 68.75rem; /* 1100px */
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@layer base {
+  h1 {
+    @apply text-3xl font-bold md:text-5xl font-sans;
+  }
+
+  h2 {
+    @apply text-2xl font-bold md:text-4xl font-sans;
+  }
+
+  h3 {
+    @apply text-xl font-bold md:text-3xl font-sans;
+  }
+
+  h4 {
+    @apply text-lg font-bold font-sans;
+  }
+
+  body {
+    @apply text-sm font-sans md:text-base;
+  }
+}
+
+@layer components {
+  /*MainLayout Section*/
+  .input-search-style {
+    @apply w-full block pl-10 pr-3 py-2 border border-gray-400 rounded-md leading-5
+    sm:text-sm bg-gray-100 placeholder-gray-500 focus:outline-none
+    focus:placeholder-gray-400
+  }
+
+  .button-icon-else {
+    @apply inline-flex items-center px-3 py-2 border border-transparent text-sm
+    leading-4 font-medium rounded-md text-gray-500 bg-white
+    hover:text-gray-700 focus:outline-none transition
+  }
+
+
+  /*Storie Section*/
+  .button-create-story {
+    @apply w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center absolute
+    bottom-0 right-0 sm:right-1 bg-blue-500 rounded-full text-white text-xs sm:text-2xl
+    font-semibold border sm:border-4 border-white sm:font-mono hover:bg-blue-700
+  }
+}
