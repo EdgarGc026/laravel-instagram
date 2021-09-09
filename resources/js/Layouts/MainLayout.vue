@@ -4,6 +4,7 @@
 		<jet-banner/>
 
 		<div class="min-h-screen">
+			<!-- Navigation -->
 			<nav class="px-4 py-2 bg-white border-b">
 				<!-- Primary Navigation Menu -->
 				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -104,7 +105,7 @@
 
 										<!-- Config profile account -->
 										<jet-dropdown-link :href="route('profile.show')">
-											Profile Account
+											Config
 										</jet-dropdown-link>
 
 										<!-- Show Instagram profile -->
@@ -150,7 +151,7 @@
 						<div class="mt-3 space-y-1">
 							<!-- Jetstream Profile Config -->
 							<jet-responsive-nav-link :href="route('profile.show')" :active="route().current('profile.show')">
-								Profile config
+								Config
 							</jet-responsive-nav-link>
 
 							<jet-responsive-nav-link :href="route('home.profile')" :active="route().current('home.profile')">
@@ -164,7 +165,6 @@
 									Log out
 								</jet-responsive-nav-link>
 							</form>
-
 							<!-- Team Management -->
 						</div>
 					</div>
@@ -172,11 +172,11 @@
 			</nav>
 
 			<!-- Page Heading -->
-			<header class="bg-white shadow" v-if="$slots.header">
-				<div class="max-w-5xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-					<slot name="header"></slot>
-				</div>
-			</header>
+			<!--			<header class="bg-white shadow" v-if="$slots.header">
+							<div class="max-w-5xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+								<slot name="header"></slot>
+							</div>
+						</header>-->
 
 			<!-- Page Content -->
 			<main>
@@ -195,12 +195,12 @@ import JetDropdownLink from '@/Jetstream/DropdownLink.vue'
 import JetNavLink from '@/Jetstream/NavLink.vue'
 import JetResponsiveNavLink from '@/Jetstream/ResponsiveNavLink.vue'
 import {Head, Link} from '@inertiajs/inertia-vue3';
-import PxIconSearch from "@/Pages/Components/PxIconSearch";
-import PxIconHome from "@/Pages/Components/PxIconHome";
-import PxIconMessage from "@/Pages/Components/PxIconMessage";
-import PxIconExplore from "@/Pages/Components/PxIconExplore";
-import PxIconLike from "@/Pages/Components/PxIconLike";
-import PxIconElse from "@/Pages/Components/PxIconElse";
+import PxIconSearch from "@/Pages/Components/Icons/PxIconSearch";
+import PxIconHome from "@/Pages/Components/Icons/PxIconHome";
+import PxIconMessage from "@/Pages/Components/Icons/PxIconMessage";
+import PxIconExplore from "@/Pages/Components/Icons/PxIconExplore";
+import PxIconLike from "@/Pages/Components/Icons/PxIconLike";
+import PxIconElse from "@/Pages/Components/Icons/PxIconElse";
 
 export default defineComponent({
 	props: {
